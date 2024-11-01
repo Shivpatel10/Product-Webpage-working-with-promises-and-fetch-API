@@ -19,5 +19,5 @@ fetch('https://www.course-api.com/javascript-store-products')
         });
     })
     .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
+        console.error('Problem with the fetch operation:', error);
     });
