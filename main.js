@@ -14,26 +14,6 @@ fetch('https://www.course-api.com/javascript-store-products') //sends an HTTP GE
     .then(products => {
         products.forEach(product => {
             const storeItem = document.createElement('li');
-            storeItem.style.listStyle = 'none';
-            storeItem.style.marginBottom = '10px';
-
-            // Access correct fields in the product object
-            const name = product.fields.name;
-            const company = product.fields.company;
-            const price = product.fields.price;
-            const imageUrl = product.fields.image[0].url;
-
-            // Create image element
-            const img = document.createElement('img');
-            img.src = imageUrl;
-            img.alt = name;
-            img.style.width = '50px';
-            img.style.height = '50px';
-            img.style.marginRight = '10px';
-
-
-
-            
             storeItem.textContent = `${product.title} - $${product.price}`;
             productStore.appendChild(storeItem);
         });
