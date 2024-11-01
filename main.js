@@ -16,7 +16,7 @@ fetch('https://www.course-api.com/javascript-store-products') //sends an HTTP GE
             const storeItem = document.createElement('li');
             storeItem.textContent = `${product.title} - $${product.price}`;
             productStore.appendChild(storeItem);
-        });
+    
 
 
 // Task 3: Display Product Details Dynamically
@@ -29,12 +29,13 @@ fetch('https://www.course-api.com/javascript-store-products') //sends an HTTP GE
  storeItem.innerHTML = `
                 <img src="${imageUrl}" alt="${name}" style="width: 50px; height: 50px; margin-right: 10px;">
                 <strong>${name}</strong> by ${company} - $${price}`;
-
-
-
+       // Append the product item to the product store list
+       productStore.appendChild(storeItem);
+    });
+})
+    
 
 // Task 4: Handle Errors Gracefully
-    })
     .catch(error => { //handles any errors that might occur during the request
         console.error('Problem with the fetch operation:', error);
     });
