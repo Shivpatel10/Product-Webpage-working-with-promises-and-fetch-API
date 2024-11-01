@@ -20,8 +20,15 @@ fetch('https://www.course-api.com/javascript-store-products') //sends an HTTP GE
 
 
 // Task 3: Display Product Details Dynamically
+ // Access the fields in the product object
+ const name = product.fields.name;
+ const company = product.fields.company;
+ const price = product.fields.price;
+ const imageUrl = product.fields.image[0].url;
 
-
+ storeItem.innerHTML = `
+                <img src="${imageUrl}" alt="${name}" style="width: 50px; height: 50px; margin-right: 10px;">
+                <strong>${name}</strong> by ${company} - $${price}`;
 
 
 
