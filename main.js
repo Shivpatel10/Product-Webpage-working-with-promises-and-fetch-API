@@ -26,7 +26,7 @@ fetch('https://www.course-api.com/javascript-store-products') //sends an HTTP GE
  const productPrice = product.fields.price;
  const productImageUrl = product.fields.image[0].url;
 
- storeItem.innerHTML = `<strong>${productName}</strong> by ${companyName} - $${productPrice}
+ storeItem.innerHTML = `${productName} by ${companyName} - $${productPrice}
                 <img src="${productImageUrl}" alt="${productName}" style="width: 100px; height: 100px; margin-left: 15px;">`;
        // Append the product item to the product store list
        productStore.appendChild(storeItem);
